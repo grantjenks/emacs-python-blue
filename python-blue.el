@@ -149,7 +149,7 @@ Show blue output, if blue exits abnormally and DISPLAY is t."
   "Automatically run blue before saving."
   :lighter " Blue"
   (if python-blue-mode
-      (when (or (not python-blue-only-if-project-is-python-blued)
+      (when (or (not python-blue-only-if-project-is-blued)
                 (python-blue-project-is-python-blued))
         (add-hook 'before-save-hook 'python-blue-buffer nil t))
     (remove-hook 'before-save-hook 'python-blue-buffer t)))
