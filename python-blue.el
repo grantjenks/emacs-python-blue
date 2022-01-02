@@ -1,14 +1,14 @@
-;;; python-blue.el --- Reformat python buffers using the "blue" formatter -*- lexical-binding: t; -*-
+;;; python-blue.el --- Reformat Python buffers using the "blue" formatter -*- lexical-binding: t -*-
+;;
+;; Copyright (c) 2022 Grant Jenks
 ;;
 ;; Author: Grant Jenks <grant.jenks@gmail.com>
 ;; Homepage: https://github.com/grantjenks/emacs-python-blue
-;; Version: 0.0.1
 ;; Package-Requires: ((emacs "27.2"))
+;; Version: 0.0.1
 ;; SPDX-License-Identifier: MIT
 ;;
 ;; MIT License
-;;
-;; Copyright (c) 2022 Grant Jenks
 ;;
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to
