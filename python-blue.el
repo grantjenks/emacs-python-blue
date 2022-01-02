@@ -108,6 +108,10 @@ blue process the exit code."
      (with-temp-buffer
        (insert-file-contents (concat parent "setup.cfg"))
        (re-search-forward "^\\[blue\\]$" nil t 1)))
+   (when-let ((parent (locate-dominating-file default-directory ".blue")))
+     (with-temp-buffer
+       (insert-file-contents (concat parent ".blue"))
+       (re-search-forward "^\\[blue\\]$" nil t 1)))
    ))
 
 ;;;###autoload
