@@ -93,7 +93,7 @@ blue process the exit code."
      (list "--pyi"))
    '("-")))
 
-(defun python-blue-project-is-python-blued (&optional display)
+(defun python-blue-project-is-python-blued ()
   "Whether the project is configured to use blue."
   (or
    (when-let ((parent (locate-dominating-file default-directory "pyproject.toml")))
