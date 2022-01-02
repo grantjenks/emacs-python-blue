@@ -1,4 +1,4 @@
-;;; python-blue.el --- Reformat python buffers using the "blue" formatter
+;;; python-blue.el --- Reformat python buffers using the "blue" formatter -*- lexical-binding: t; -*-
 ;;
 ;; Author: Grant Jenks <grant.jenks@gmail.com>
 ;; Homepage: https://github.com/grantjenks/emacs-python-blue
