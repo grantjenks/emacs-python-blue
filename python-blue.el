@@ -72,10 +72,8 @@ blue process the exit code."
                                  :command `(,python-blue-executable ,@(python-blue-call-args))
                                  :buffer output-buffer
                                  :stderr error-buffer
-                                 :noquery t
-                                 :sentinel (lambda (process event)))))
+                                 :noquery t)))
       (set-process-query-on-exit-flag (get-buffer-process error-buffer) nil)
-      (set-process-sentinel (get-buffer-process error-buffer) (lambda (process event)))
       (save-restriction
         (widen)
         (process-send-region process (point-min) (point-max)))
