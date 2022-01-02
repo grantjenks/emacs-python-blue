@@ -42,7 +42,7 @@
 ;; To automatically format all Python buffers before saving, add the
 ;; function python-blue-mode to python-mode-hook:
 ;;
-;; (add-hook 'python-mode-hook 'python-blue-mode)
+;; (add-hook 'python-mode-hook #'python-blue-mode)
 ;;
 ;;; Code:
 
@@ -137,7 +137,7 @@ Show blue output, if blue exits abnormally and DISPLAY is t."
               (copy-to-buffer original-buffer (point-min) (point-max)))
             (goto-char original-point)
             (set-window-start (selected-window) original-window-pos))
-          (mapc 'kill-buffer (list tmpbuf errbuf)))
+          (mapc #'kill-buffer (list tmpbuf errbuf)))
       (error (message "%s" (error-message-string err))
              (when display
                (with-current-buffer errbuf
@@ -151,8 +151,8 @@ Show blue output, if blue exits abnormally and DISPLAY is t."
   (if python-blue-mode
       (when (or (not python-blue-only-if-project-is-blued)
                 (python-blue-project-is-python-blued))
-        (add-hook 'before-save-hook 'python-blue-buffer nil t))
-    (remove-hook 'before-save-hook 'python-blue-buffer t)))
+        (add-hook 'before-save-hook #'python-blue-buffer nil t))
+    (remove-hook 'before-save-hook #'python-blue-buffer t)))
 
 (provide 'python-blue)
 
