@@ -89,7 +89,7 @@ blue process the exit code."
   "Build blue process call arguments."
   (append
    (when (and (buffer-file-name (current-buffer))
-              (string-match "\\.pyi\\'" (buffer-file-name (current-buffer))))
+              (string-match "\\.pyi" (buffer-file-name (current-buffer))))
      (list "--pyi"))
    '("-")))
 
