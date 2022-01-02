@@ -46,8 +46,6 @@
 ;;
 ;;; Code:
 
-(require 'cl-lib)
-
 (defgroup python-blue nil
   "Reformat Python code with \"blue\"."
   :group 'python)
