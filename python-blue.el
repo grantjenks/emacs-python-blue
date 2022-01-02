@@ -57,7 +57,7 @@
   :type 'string)
 
 (defcustom python-blue-only-if-project-is-blued t
-  "Only run blue if project blue configured."
+  "Only run blue if project has blue configured."
   :type 'boolean
   :safe 'booleanp)
 
