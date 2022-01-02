@@ -111,8 +111,7 @@ blue process the exit code."
    (when-let ((parent (locate-dominating-file default-directory ".blue")))
      (with-temp-buffer
        (insert-file-contents (concat parent ".blue"))
-       (re-search-forward "^\\[blue\\]$" nil t 1)))
-   ))
+       (re-search-forward "^\\[blue\\]$" nil t 1)))))
 
 ;;;###autoload
 (defun python-blue-buffer (&optional display)
